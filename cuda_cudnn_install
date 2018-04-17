@@ -1,0 +1,35 @@
+# cuda_cudnn_install
+
+cuda: https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal
+
+cudnn: https://developer.nvidia.com/rdp/cudnn-archive
+
+tensorflow: https://www.tensorflow.org/install/install_linux
+
+alt+sup+f1
+sudo service lightdm stop
+cd Downloads
+sudo sh cuda_9.0.176_384.81_linux.run
+press q
+graphical driver -> no
+cuda -> yes
+sample -> yes
+sudo sh cuda_9.0.176_384.81_linux.run -driver -silent
+sudo service lightdm start
+
+echo "export PATH=$PATH:/usr/local/cuda-9.0/bin" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64" >> ~/.bashrc
+
+nvcc --version
+
+cd ~/NVIDIA_CUDA-8.0_Samples/1_Utilities/deviceQuery
+make
+./deviceQuery
+
+
+tar -xzvf cudnn-9.0-linux-x64-v7.tgz
+
+Copy the following files into the CUDA Toolkit directory.
+$ sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+$ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+$ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
