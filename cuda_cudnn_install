@@ -24,9 +24,11 @@ sudo service lightdm start
 echo "export PATH=$PATH:/usr/local/cuda-9.0/bin" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64" >> ~/.bashrc
 
+reboot
+
 nvcc --version
 
-cd ~/NVIDIA_CUDA-8.0_Samples/1_Utilities/deviceQuery
+cd ~/NVIDIA_CUDA-9.0_Samples/1_Utilities/deviceQuery
 make
 ./deviceQuery
 
