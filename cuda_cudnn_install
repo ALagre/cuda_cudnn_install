@@ -8,6 +8,9 @@ cudnn: https://developer.nvidia.com/rdp/cudnn-archive
 
 tensorflow: https://www.tensorflow.org/install/install_linux
 
+
+sudo apt-get install nvidia-cuda-toolkit
+
 md5sum cuda_9.0.176_384.81_linux.run
 
 ctrl+alt+f1
@@ -39,3 +42,13 @@ Copy the following files into the CUDA Toolkit directory.
 $ sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 $ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+
+Anaconda: https://www.anaconda.com/download/#linux
+
+conda create -n tensorflow pip python=2.7
+source activate tensorflow
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.7.0-cp27-none-linux_x86_64.whl
+
+test:
+sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+
