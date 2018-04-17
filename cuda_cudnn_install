@@ -8,7 +8,7 @@ tensorflow: https://www.tensorflow.org/install/install_linux
 
 md5sum cuda_9.0.176_384.81_linux.run
 
-alt+sup+f1
+ctrl+alt+f1
 sudo service lightdm stop
 cd Downloads
 sudo sh cuda_9.0.176_384.81_linux.run
