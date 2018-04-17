@@ -6,6 +6,8 @@ cudnn: https://developer.nvidia.com/rdp/cudnn-archive
 
 tensorflow: https://www.tensorflow.org/install/install_linux
 
+md5sum cuda_9.0.176_384.81_linux.run
+
 alt+sup+f1
 sudo service lightdm stop
 cd Downloads
