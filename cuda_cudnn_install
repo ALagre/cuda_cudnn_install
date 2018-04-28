@@ -1,12 +1,14 @@
 # cuda_cudnn_install
 
-Music: https://www.youtube.com/watch?v=9FX34TjJe-c
-
 cuda: https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal
 
 cudnn: https://developer.nvidia.com/rdp/cudnn-archive
 
 tensorflow: https://www.tensorflow.org/install/install_linux
+
+Anaconda: https://www.anaconda.com/download/#linux
+
+Music: https://www.youtube.com/watch?v=9FX34TjJe-c
 
 
 sudo apt-get install nvidia-cuda-toolkit
